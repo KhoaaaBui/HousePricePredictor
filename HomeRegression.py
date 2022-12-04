@@ -1,6 +1,7 @@
 import sklearn
 from sklearn import linear_model
-from sklearn import linear_model
+from sklearn.linear_model import LinearRegression
+import statsmodels.api
 import matplotlib.pyplot as plot
 import pandas
 
@@ -21,6 +22,7 @@ def train_data():
     reg = linear_model.LinearRegression()
     model = reg.fit(train_set, train_target)
     print(model.coef_)
+    print(model.summary())
     #plot.scatter(train_set, train_target, color="black")
     #plot.plot(train_set, train_target, color="blue", linewidth=3)
 
